@@ -19,6 +19,16 @@ view: ga_sessions {
 
   sql_table_name: `ga360.ga_sessions_*` ;;
 
+  dimension: block_name {
+    type: string
+    sql: "Google Analytics" ;;
+    link: {
+      url: "https://googlecloud.looker.com/dashboards/44"
+      label: "Google Analytics Dashboard"
+      icon_url: "http://www.looker.com/favicon.ico"
+    }
+  }
+
   # If you have custom dimensions on sessions, declare them here.
 
   # dimension: custom_dimension_2 {
