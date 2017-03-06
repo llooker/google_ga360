@@ -145,25 +145,24 @@ view: ga_sessions_base {
 
   measure: session_count {
     type: count
-    drill_fields: [id, visitStart_time, totals.hits, totals.pageviews, totals.timeonsite, totals.bounces]
+    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits, totals.pageviews, totals.timeonsite, totals.bounces]
   }
-
   measure: unique_visitors {
     type: count_distinct
     sql: ${fullVisitorId} ;;
-    drill_fields: [fullVisitorId, totals.hits, totals.page_views, totals.timeonsite]
+    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits, totals.page_views, totals.timeonsite]
   }
 
   measure: average_sessions_ver_visitor {
     type: number
     sql: ${session_count}/${unique_visitors}  ;;
     value_format_name: decimal_2
-    drill_fields: [fullVisitorId, totals.hits, totals.page_views, totals.timeonsite]
+    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits, totals.page_views, totals.timeonsite]
   }
 
   measure: total_visitors {
     type: count
-    drill_fields: [fullVisitorId, totals.hits, totals.page_views, totals.timeonsite]
+    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits, totals.page_views, totals.timeonsite]
   }
 
   measure: first_time_visitors {
@@ -457,7 +456,7 @@ view: hits_base {
 
 
   set: detail {
-    fields: [id, hit_time, hits_page.pagePath, hits.pageTitle]
+    fields: [ga_sessions.id, ga_sessions.visitnumber, ga_sessions.session_count, hits_page.pagePath, hits.pageTitle]
   }
 }
 
