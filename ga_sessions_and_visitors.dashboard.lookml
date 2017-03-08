@@ -239,45 +239,45 @@
     hidden_series: []
     x_axis_label: Date
 
-  - name: visitors_source
-    title: Visitors' Source
-    type: looker_pie
-    model: bq_connectors_ga360
-    explore: ga_sessions
-    dimensions: [trafficSource.source]
-    measures: [ga_sessions.unique_visitors]
-    filters:
-      ga_sessions.partition_date: 2013-09-10 00:00:00
-    sorts: [ga_sessions.unique_visitors desc]
-    limit: '50'
-    column_limit: '50'
-    query_timezone: America/New_York
-    value_labels: legend
-    label_type: labPer
-    stacking: ''
-    show_value_labels: false
-    label_density: 25
-    legend_position: center
-    x_axis_gridlines: false
-    y_axis_gridlines: true
-    show_view_names: true
-    limit_displayed_rows: false
-    y_axis_combined: true
-    show_y_axis_labels: true
-    show_y_axis_ticks: true
-    y_axis_tick_density: default
-    y_axis_tick_density_custom: 5
-    show_x_axis_label: true
-    show_x_axis_ticks: true
-    x_axis_scale: auto
-    y_axis_scale_mode: linear
-    ordering: none
-    show_null_labels: false
-    show_totals_labels: false
-    show_silhouette: false
-    totals_color: "#808080"
-    series_types: {}
-    inner_radius: 30
+  # - name: visitors_source
+  #   title: Visitors' Source
+  #   type: looker_pie
+  #   model: bq_connectors_ga360
+  #   explore: ga_sessions
+  #   dimensions: [trafficSource.source]
+  #   measures: [ga_sessions.unique_visitors]
+  #   filters:
+  #     ga_sessions.partition_date: 2013-09-10 00:00:00
+  #   sorts: [ga_sessions.unique_visitors desc]
+  #   limit: '50'
+  #   column_limit: '50'
+  #   query_timezone: America/New_York
+  #   value_labels: legend
+  #   label_type: labPer
+  #   stacking: ''
+  #   show_value_labels: false
+  #   label_density: 25
+  #   legend_position: center
+  #   x_axis_gridlines: false
+  #   y_axis_gridlines: true
+  #   show_view_names: true
+  #   limit_displayed_rows: false
+  #   y_axis_combined: true
+  #   show_y_axis_labels: true
+  #   show_y_axis_ticks: true
+  #   y_axis_tick_density: default
+  #   y_axis_tick_density_custom: 5
+  #   show_x_axis_label: true
+  #   show_x_axis_ticks: true
+  #   x_axis_scale: auto
+  #   y_axis_scale_mode: linear
+  #   ordering: none
+  #   show_null_labels: false
+  #   show_totals_labels: false
+  #   show_silhouette: false
+  #   totals_color: "#808080"
+  #   series_types: {}
+  #   inner_radius: 30
 
   - name: session_map
     title: Where in the US are Sessions From?

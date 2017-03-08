@@ -7,16 +7,16 @@ explore: ga_sessions_base {
     sql: LEFT JOIN UNNEST([${ga_sessions.totals}]) as totals ;;
     relationship: one_to_one
   }
-  join: trafficSource {
-    view_label: "Session: Traffic Source"
-    sql: LEFT JOIN UNNEST([${ga_sessions.trafficSource}]) as trafficSource ;;
-    relationship: one_to_one
-  }
-  join: adwordsClickInfo {
-    view_label: "Session: Traffic Source : Adwords"
-    sql: LEFT JOIN UNNEST([${trafficSource.adwordsClickInfo}]) as  adwordsClickInfo;;
-    relationship: one_to_one
-  }
+  # join: trafficSource {
+  #   view_label: "Session: Traffic Source"
+  #   sql: LEFT JOIN UNNEST([${ga_sessions.trafficSource}]) as trafficSource ;;
+  #   relationship: one_to_one
+  # }
+  # join: adwordsClickInfo {
+  #   view_label: "Session: Traffic Source : Adwords"
+  #   sql: LEFT JOIN UNNEST([${trafficSource.adwordsClickInfo}]) as  adwordsClickInfo;;
+  #   relationship: one_to_one
+  # }
   join: device {
     view_label: "Session: Device"
     sql: LEFT JOIN UNNEST([${ga_sessions.device}]) as device ;;
