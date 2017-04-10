@@ -7,14 +7,20 @@ explore: ga_sessions_base {
     sql: LEFT JOIN UNNEST([${ga_sessions.totals}]) as totals ;;
     relationship: one_to_one
   }
-  # join: trafficSource {
-  #   view_label: "Session: Traffic Source"
-  #   sql: LEFT JOIN UNNEST([${ga_sessions.trafficSource}]) as trafficSource ;;
-  #   relationship: one_to_one
-  # }
+  join: trafficSource {
+    view_label: "Session: Traffic Source"
+    sql: LEFT JOIN UNNEST([${ga_sessions.trafficSource}]) as trafficSource ;;
+    relationship: one_to_one
+  }
   # join: adwordsClickInfo {
   #   view_label: "Session: Traffic Source : Adwords"
   #   sql: LEFT JOIN UNNEST([${trafficSource.adwordsClickInfo}]) as  adwordsClickInfo;;
+  #   relationship: one_to_one
+  # }
+
+  # join: DoubleClickClickInfo {
+  #   view_label: "Session: Traffic Source : DoubleClick"
+  #   sql: LEFT JOIN UNNEST([${trafficSource.DoubleClickClickInfo}]) as  DoubleClickClickInfo;;
   #   relationship: one_to_one
   # }
   join: device {
@@ -312,7 +318,8 @@ view: totals_base {
   measure: transactionRevenue_total {
     label: "Transaction Revenue Total"
     type: sum
-    sql: ${TABLE}.transactionRevenue ;;
+    sql: (${TABLE}.transactionRevenue/1000000) ;;
+    value_format_name: usd_0
   }
   measure: newVisits_total {
     label: "New Visits Total"
@@ -346,7 +353,7 @@ view: trafficSource_base {
   extension: required
 
   dimension: addContent {}
-  dimension: adwords {}
+#   dimension: adwords {}
   dimension: referralPath {label: "Referral Path"}
   dimension: campaign {}
   dimension: source {}
@@ -362,8 +369,13 @@ view: trafficSource_base {
     sql: ${source} ;;
     drill_fields: [source, totals.hits, totals.pageviews]
   }
+  measure: keyword_count {
+    type: count_distinct
+    sql: ${keyword} ;;
+    drill_fields: [keyword, totals.hits, totals.pageviews]
+  }
   # Subrecords
-  dimension: adwordsClickInfo {}
+#   dimension: adwordsClickInfo {}
 }
 
 view: adwordsClickInfo_base {

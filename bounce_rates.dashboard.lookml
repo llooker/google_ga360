@@ -7,6 +7,7 @@
 
   elements:
 
+## un hard code the filters
 
     - name: average_sessions_per_visitor
       title: Average Sessions per Visitor
