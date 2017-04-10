@@ -22,11 +22,11 @@ view: ga_sessions {
   dimension: block_name {
     type: string
     sql: "Google Analytics" ;;
-    link: {
-      url: "https://googlecloud.looker.com/dashboards/44"
-      label: "Google Analytics Dashboard"
-      icon_url: "http://www.looker.com/favicon.ico"
-    }
+    # link: {
+    #   url: "https://googlecloud.looker.com/dashboards/44"
+    #   label: "Google Analytics Dashboard"
+    #   icon_url: "http://www.looker.com/favicon.ico"
+    # }
   }
 
   # If you have custom dimensions on sessions, declare them here.
@@ -92,13 +92,21 @@ view: hits_publisher {
 #  We only want some of the interaction fields.
 view: hits_social {
   extends: [hits_social_base]
+
   dimension: socialInteractionNetwork {hidden: yes}
+
   dimension: socialInteractionAction {hidden: yes}
+
   dimension: socialInteractions {hidden: yes}
+
   dimension: socialInteractionTarget {hidden: yes}
+
   #dimension: socialNetwork {hidden: yes}
+
   dimension: uniqueSocialInteractions {hidden: yes}
+
   #dimension: hasSocialSourceReferral {hidden: yes}
+
   dimension: socialInteractionNetworkAction {hidden: yes}
 }
 
