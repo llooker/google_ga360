@@ -534,7 +534,7 @@ view: hits_item_base {
 }
 
 view: hits_social_base {
-  extension: required
+  extension: required   ## THESE FIELDS WILL ONLY BE AVAILABLE IF VIEW "hits_social" IN GA CUSTOMIZE HAS THE "extends" parameter declared
 
   dimension: socialInteractionNetwork {label: "Social Interaction Network"}
   dimension: socialInteractionAction {label: "Social Interaction Action"}
@@ -550,7 +550,7 @@ view: hits_social_base {
 }
 
 view: hits_publisher_base {
-  extension: required
+  extension: required    ## THESE FIELDS WILL ONLY BE AVAILABLE IF VIEW "hits_publisher" IN GA CUSTOMIZE HAS THE "extends" parameter declared
 
   dimension: dfpClicks {}
   dimension: dfpImpressions {}
