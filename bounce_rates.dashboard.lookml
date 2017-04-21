@@ -5,9 +5,12 @@
 
   filters:
 
-  elements:
+    - name: date
+      label: "Date"
+      type: date_filter
+      default_value: "7 days ago for 7 day"
 
-## un hard code the filters
+  elements:
 
     - name: average_sessions_per_visitor
       title: Average Sessions per Visitor
@@ -15,8 +18,8 @@
       model: bq_connectors_ga360
       explore: ga_sessions
       measures: [ga_sessions.average_sessions_ver_visitor]
-      filters:
-         ga_sessions.partition_date: 2013-09-10 00:00:00
+      listen:
+        date: ga_sessions.partition_date
       limit: '500'
       column_limit: '50'
       query_timezone: America/New_York
@@ -60,8 +63,8 @@
       model: bq_connectors_ga360
       explore: ga_sessions
       measures: [ga_sessions.unique_visitors]
-      filters:
-        ga_sessions.partition_date: 2013-09-10 00:00:00
+      listen:
+        date: ga_sessions.partition_date
       limit: '500'
       column_limit: '50'
       query_timezone: America/New_York
@@ -102,8 +105,8 @@
       model: bq_connectors_ga360
       explore: ga_sessions
       measures: [ga_sessions.session_count]
-      filters:
-        ga_sessions.partition_date: 2013-09-10 00:00:00
+      listen:
+        date: ga_sessions.partition_date
       limit: '500'
       column_limit: '50'
       query_timezone: America/New_York
@@ -144,8 +147,8 @@
       model: bq_connectors_ga360
       explore: ga_sessions
       measures: [totals.bounces_total]
-      filters:
-        ga_sessions.partition_date: 2013-09-10 00:00:00
+      listen:
+        date: ga_sessions.partition_date
       limit: '500'
       column_limit: '50'
       query_timezone: America/New_York
@@ -189,8 +192,8 @@
       model: bq_connectors_ga360
       explore: ga_sessions
       measures: [totals.bounce_rate]
-      filters:
-        ga_sessions.partition_date: 2013-09-10 00:00:00
+      listen:
+        date: ga_sessions.partition_date
       limit: '500'
       column_limit: '50'
       query_timezone: America/New_York
@@ -234,8 +237,8 @@
       explore: ga_sessions
       dimensions: [ga_sessions.partition_date]
       measures: [totals.bounce_rate]
-      filters:
-        ga_sessions.partition_date: 2013-09-10 00:00:00
+      listen:
+        date: ga_sessions.partition_date
       sorts: [ga_sessions.partition_date desc]
       limit: '500'
       column_limit: '50'
@@ -278,8 +281,8 @@
       explore: ga_sessions
       dimensions: [ga_sessions.channelGrouping]
       measures: [totals.bounce_rate, totals.bounces_total]
-      filters:
-        ga_sessions.partition_date: 2013-09-10 00:00:00
+      listen:
+        date: ga_sessions.partition_date
       sorts: [totals.bounces_total desc]
       limit: '500'
       column_limit: '50'
@@ -319,8 +322,8 @@
       explore: ga_sessions
       dimensions: [device.browser]
       measures: [totals.bounces_total, totals.bounce_rate]
-      filters:
-        ga_sessions.partition_date: 2013-09-10 00:00:00
+      listen:
+        date: ga_sessions.partition_date
       sorts: [totals.bounces_total desc]
       limit: '10'
       column_limit: '50'
@@ -362,8 +365,9 @@
       explore: ga_sessions
       dimensions: [ga_sessions.visitnumbertier]
       measures: [totals.bounce_rate, totals.bounces_total]
+      listen:
+        date: ga_sessions.partition_date
       filters:
-        ga_sessions.partition_date: 2013-09-10 00:00:00
         ga_sessions.visitnumbertier: "-Below 1"
       sorts: [ga_sessions.visitnumbertier]
       limit: '500'
@@ -403,8 +407,9 @@
       dimensions: [ga_sessions.partition_date]
       measures: [ga_sessions.returning_visitors, ga_sessions.unique_visitors]
       filters:
-        ga_sessions.partition_date: 2013-09-10 00:00:00
         ga_sessions.visitnumbertier: "-Below 1"
+      listen:
+        date: ga_sessions.partition_date
       sorts: [ga_sessions.partition_date desc, ga_sessions.visitnumbertier__sort_]
       limit: '500'
       column_limit: '50'
@@ -452,8 +457,8 @@
       pivots: [ga_sessions.first_time_visitor]
       fill_fields: [ga_sessions.first_time_visitor]
       measures: [totals.bounce_rate]
-      filters:
-        ga_sessions.partition_date: 2013-09-10 00:00:00
+      listen:
+        date: ga_sessions.partition_date
       sorts: [ga_sessions.partition_date desc, ga_sessions.first_time_visitor]
       limit: '500'
       column_limit: '50'
@@ -497,8 +502,8 @@
       dimensions: [ga_sessions.first_time_visitor]
       fill_fields: [ga_sessions.first_time_visitor]
       measures: [totals.bounces_total]
-      filters:
-        ga_sessions.partition_date: 2013-09-10 00:00:00
+      listen:
+        date: ga_sessions.partition_date
       sorts: [ga_sessions.first_time_visitor]
       limit: '500'
       column_limit: '50'
@@ -545,8 +550,9 @@
       measures: [ga_sessions.session_count, totals.bounces_total, totals.bounce_rate,
         totals.timeonsite_average_per_session, ga_sessions.unique_visitors, ga_sessions.returning_visitors,
         ga_sessions.total_visitors, totals.transactions_count, totals.transactionRevenue_total]
+      listen:
+        date: ga_sessions.partition_date
       filters:
-        ga_sessions.partition_date: 2013-09-10 00:00:00
         hits_page.pageTitle: "-NULL"
       sorts: [ga_sessions.session_count desc]
       limit: '500'
@@ -589,8 +595,9 @@
       explore: ga_sessions
       dimensions: [hits_page.pageTitle]
       measures: [totals.bounce_rate, ga_sessions.session_count]
+      listen:
+        date: ga_sessions.partition_date
       filters:
-        ga_sessions.partition_date: 2013-09-10 00:00:00
         totals.bounce_rate: ">.1"
       sorts: [ga_sessions.session_count desc]
       limit: '10'

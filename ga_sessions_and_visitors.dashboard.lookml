@@ -5,6 +5,11 @@
 
   filters:
 
+    - name: date
+      label: "Date"
+      type: date_filter
+      default_value: "7 days ago for 7 day"
+
   elements:
   - name: total_hits
     title: Total Hits
@@ -13,8 +18,8 @@
     explore: ga_sessions
     measures: [totals.hits_total, ga_sessions.session_count, ga_sessions.unique_visitors,
       totals.timeonsite_average_per_session]
-    filters:
-      ga_sessions.partition_date: 2013-09-10 00:00:00
+    listen:
+       date: ga_sessions.partition_date
     sorts: [totals.hits_total desc]
     limit: '500'
     column_limit: '50'
@@ -59,8 +64,8 @@
     explore: ga_sessions
     measures: [totals.hits_total, ga_sessions.session_count, ga_sessions.unique_visitors,
       totals.timeonsite_average_per_session]
-    filters:
-      ga_sessions.partition_date: 2013-09-10 00:00:00
+    listen:
+      date: ga_sessions.partition_date
     sorts: [totals.hits_total desc]
     limit: '500'
     column_limit: '50'
@@ -105,8 +110,8 @@
     explore: ga_sessions
     measures: [totals.hits_total, ga_sessions.session_count, ga_sessions.unique_visitors,
       totals.timeonsite_average_per_session]
-    filters:
-      ga_sessions.partition_date: 2013-09-10 00:00:00
+    listen:
+       date: ga_sessions.partition_date
     sorts: [totals.hits_total desc]
     limit: '500'
     column_limit: '50'
@@ -150,8 +155,8 @@
     explore: ga_sessions
     measures: [totals.hits_total, ga_sessions.session_count, ga_sessions.unique_visitors,
       totals.timeonsite_average_per_session]
-    filters:
-      ga_sessions.partition_date: 2013-09-10 00:00:00
+    listen:
+      date: ga_sessions.partition_date
     sorts: [totals.hits_total desc]
     limit: '500'
     column_limit: '50'
@@ -196,8 +201,8 @@
     dimensions: [ga_sessions.partition_date]
     measures: [totals.hits_total, ga_sessions.session_count, ga_sessions.unique_visitors,
       totals.timeonsite_average_per_session]
-    filters:
-      ga_sessions.partition_date: 2013-09-10 00:00:00
+    listen:
+      date: ga_sessions.partition_date
     sorts: [ga_sessions.partition_date]
     limit: '500'
     column_limit: '50'
@@ -246,8 +251,8 @@
   #   explore: ga_sessions
   #   dimensions: [trafficSource.source]
   #   measures: [ga_sessions.unique_visitors]
-  #   filters:
-  #     ga_sessions.partition_date: 2013-09-10 00:00:00
+  #   listen:
+  #     date: ga_sessions.partition_date
   #   sorts: [ga_sessions.unique_visitors desc]
   #   limit: '50'
   #   column_limit: '50'
@@ -286,9 +291,10 @@
     explore: ga_sessions
     dimensions: [geoNetwork.location]
     measures: [ga_sessions.session_count]
+    listen:
+      date: ga_sessions.partition_date
     filters:
       geoNetwork.location_bin_level: '8'
-      ga_sessions.partition_date: 2013-09-10 00:00:00
       geoNetwork.location: inside box from 55.7765730186677, -157.50000000000003 to 0, -45
     sorts: [ga_sessions.session_count desc]
     limit: '5000'
@@ -357,8 +363,8 @@
     dimensions: [hits_page.pagePath]
     measures: [ga_sessions.session_count, ga_sessions.unique_visitors, totals.newVisits_total,
       totals.timeonsite_average_per_session]
-    filters:
-      ga_sessions.partition_date: 2013-09-10 00:00:00
+    listen:
+      date: ga_sessions.partition_date
     sorts: [ga_sessions.session_count desc]
     limit: '10'
     column_limit: '50'
@@ -402,8 +408,9 @@
     dimensions: [hits_social.socialNetwork, device.operatingSystem]
     pivots: [device.operatingSystem]
     measures: [ga_sessions.unique_visitors]
+    listen:
+      date: ga_sessions.partition_date
     filters:
-      ga_sessions.partition_date: 2013-09-10 00:00:00
       hits_social.socialNetwork: Facebook,Twitter,reddit
     sorts: [ga_sessions.unique_visitors desc 0, hits_social.socialNetwork, device.operatingSystem]
     limit: '500'
@@ -427,8 +434,9 @@
     explore: ga_sessions
     dimensions: [totals.timeonsite_tier]
     measures: [ga_sessions.session_count]
+    listen:
+      date: ga_sessions.partition_date
     filters:
-      ga_sessions.partition_date: 2013-09-10 00:00:00
       totals.timeonsite_tier: "-Undefined"
     sorts: [totals.timeonsite_tier]
     limit: '500'
@@ -466,8 +474,8 @@
     dimensions: [trafficSource.source]
     measures: [ga_sessions.unique_visitors, totals.timeonsite_average_per_session, ga_sessions.session_count,
       totals.bounce_rate, totals.transactionRevenue_total]
-    filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00'
+    listen:
+      date: ga_sessions.partition_date
     sorts: [ga_sessions.unique_visitors desc]
     limit: '500'
     column_limit: '50'
