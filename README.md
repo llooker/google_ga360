@@ -32,6 +32,10 @@
 
 ### Connecting to Other Data Sources
 
+The image below depicts the possible linkes between various Google and external data sources. Documentation on how to link each of these sources can also be found below.
+
+![image](https://cloud.githubusercontent.com/assets/9888083/25569596/2fcb070e-2dcf-11e7-80d8-873d2de373aa.png)
+
 * **Doubleclick Campaign (Bid) Manager**: Requires admin permissions for the Google users. [Follow the documentation here](https://support.google.com/analytics/answer/6318719?hl=en).
 
 
