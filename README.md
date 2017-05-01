@@ -1,6 +1,7 @@
 ### What does this Block do for me?
 
 * Accelerated Time to Value
+* Expertise of Google + Looker data teams
 * Accessibility
 * Best Practice Design Patterns
 * Leveraging Most of BQ Investment
@@ -43,6 +44,6 @@ The image below depicts the possible linkes between various Google and external 
 
 * **Adwords**: Connecting AdWords is fairly straightforward. Follow the instructions provided in Google's documentation. Once you've done this, be sure to include the AdWord data by adding the ``extends: [adwordsClickInfo_base]`` beneath ``view: adwordsClickInfo`` (on line 86 in ``ga_customize`` out-of-the-box)
 
-* **YouTube**: Youtube integration can be configured via the GUI in the GA360 console.
+* **YouTube**: Youtube integration can be configured via the GUI in the GA360 console, though only data around the Youtube content can be linked, not user-level or client-speficic data.
 
 * **CRMs or Other Sources** Google does not capture any PII, which means that ``user_id`` and/or ``client_id`` is unique to only Google Analytics Premium. This key is not shared, by default, across any of your CRM data, or any other data sources you're pulling from. To join this data, a common key must be created. There are several methods to accomplishing this, one of which Google has provided some [documentation](https://github.com/GoogleCloudPlatform/google-analytics-premium-bigquery-statistics) around.
