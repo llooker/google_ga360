@@ -445,7 +445,7 @@
       listen:
         date: ga_sessions.partition_date
       sorts: [ga_sessions.session_count desc]
-      limit: '500'
+      limit: '10'
       column_limit: '50'
       query_timezone: America/New_York
       stacking: ''

@@ -1,6 +1,6 @@
 - dashboard: ga_sessions_and_visitors
   title: Ga Sessions and Visitors
-  layout: simple
+  layout: tile
   tile_size: 100
 
   filters:
