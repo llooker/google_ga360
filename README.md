@@ -42,7 +42,7 @@ The image below depicts the possible linkes between various Google and external 
 
 * **DoubleClick for Publishers**: This integration includes both [AdSense](https://www.google.com/adsense/start/#/?modal_active=none) and [Ad Exchange](https://www.doubleclickbygoogle.com/solutions/digital-marketing/ad-exchange/), and requires work on the side of the Google Admin, as well as the creation of a tagging system using either self-built or Google service-provided tag managers. After tagging is enabled, the following steps can be found in [Google's Documentation](https://support.google.com/analytics/answer/6371469?hl=en). Once you've done this, be sure to include the AdWord data by adding the ``extends: [hits_publisher_base]`` beneath ``view: hits_publisher`` (on line 90 in ``ga_customize`` out-of-the-box)
 
-* **Adwords**: Connecting AdWords is fairly straightforward. Follow the instructions provided in Google's documentation. Once you've done this, be sure to include the AdWord data by adding the ``extends: [adwordsClickInfo_base]`` beneath ``view: adwordsClickInfo`` (on line 86 in ``ga_customize`` out-of-the-box)
+* **Adwords**: Connecting AdWords is fairly straightforward. Follow the instructions provided in [Google's documentation](https://support.google.com/adwords/answer/6209127?hl=en). Once you've done this, be sure to include the AdWord data by adding the ``extends: [adwordsClickInfo_base]`` beneath ``view: adwordsClickInfo`` (on line 86 in ``ga_customize`` out-of-the-box)
 
 * **YouTube**: Youtube integration can be configured via the GUI in the GA360 console, though only data around the Youtube content can be linked, not user-level or client-speficic data.
 
