@@ -129,7 +129,7 @@ view: ga_sessions_base {
   dimension: visitnumbertier {
     label: "Visit Number Tier"
     type: tier
-    tiers: [1,2,5,10,50,100]
+    tiers: [1,2,5,10,15,20,50,100]
     style: integer
     sql: ${visitnumber} ;;
   }
@@ -292,7 +292,7 @@ view: totals_base {
     type: tier
     sql: ${TABLE}.timeonsite ;;
     tiers: [0,15,30,60,90,120,180,240,300,600]
-    style: relational
+    style: integer
   }
   measure: timeonsite_average_per_session {
     label: "Time On Site Average Per Session"
