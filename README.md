@@ -1,10 +1,9 @@
 ### What does this Block do for me?
 
-* Accelerated Time to Value
-* Expertise of Google + Looker data teams
-* Accessibility
-* Best Practice Design Patterns
-* Leveraging Most of BQ Investment
+* Accelerated time to value with a full plug-and-play model
+* Leverage analytics expertise of Google + Looker data teams
+* Best practice design patterns
+* Execute optimized, cost-efficient queries
 
 
 ### Google Analytics Premium Data Structure

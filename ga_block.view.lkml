@@ -1,4 +1,5 @@
 explore: ga_sessions_base {
+  persist_for: "1 hour"
   extension: required
   view_name: ga_sessions
   view_label: "Session"
@@ -134,18 +135,23 @@ view: ga_sessions_base {
   }
   dimension: visitId {label: "Visit ID"}
   dimension: fullVisitorId {label: "Full Visitor ID"}
+
   dimension: visitStartSeconds {
     label: "Visit Start Seconds"
     type: date
-    sql: ${TABLE}.visitStarttime ;;
+    sql: TIMESTAMP_SECONDS(${TABLE}.visitStarttime) ;;
     hidden: yes
   }
   dimension_group: visitStart {
+    timeframes: [date,day_of_week,fiscal_quarter,week,month,year,month_name,month_num,week_of_year]
     label: "Visit Start"
     type: time
     sql: (TIMESTAMP(${visitStartSeconds})) ;;
   }
-  dimension: date {}
+  ## use visit or hit start time instead
+  dimension: date {
+    hidden: yes
+  }
   dimension: socialEngagementType {label: "Social Engagement Type"}
   dimension: userid {label: "User ID"}
 
@@ -429,6 +435,7 @@ view: hits_base {
   dimension: hitNumber {}
   dimension: time {}
   dimension_group: hit {
+    timeframes: [date,day_of_week,fiscal_quarter,week,month,year,month_name,month_num,week_of_year]
     type: time
     sql: TIMESTAMP_MILLIS(${ga_sessions.visitStartSeconds}*1000 + ${TABLE}.time) ;;
   }
