@@ -1,9 +1,9 @@
 ### What does this Block do for me?
 
-* Accelerated time to value with a full plug-and-play model
-* Leverage analytics expertise of Google + Looker data teams
-* Best practice design patterns
-* Execute optimized, cost-efficient queries
+* Replication of existing GA reports and dashboards, plus additional value-add analysis
+* Accelerate time to value with a full plug-and-play model
+* Leverage analytics expertise of Looker + Google Analytics product teams
+* Take advantage of Looker's data platform functionality, including [data actions](https://discourse.looker.com/t/data-actions/3573), scheduling, permissions, alerting, and more
 
 
 ### Google Analytics Premium Data Structure
@@ -29,6 +29,10 @@
 
 * **Available Explores**: Recall from above, that each ``extends`` field but must declared to allow users to Explore on a view.
 
+### Bringing in Custom User Segments
+
+* Google Analytics provides great, out-of-the-box capabilities to create user segments based on up to 5 dimensions (e.g. demographic info, referral path, etc.). While these custom user segments are not exported to the GAP data set natively, it's easier, and more flexible, to recreate these segments in Looker. Simply create a dimension using a `Case When` statement, including all of the dimensions you'd like to filter on. Alternatively, you can create a filtered measure instead. Plus, you can include as many filters as you'd like to really hone in on specific user cohorts. Your assigned looker analyst or support chat can help you build in this logic if you get confused.
+
 
 ### Connecting to Other Data Sources
 
@@ -36,13 +40,13 @@ The image below depicts the possible linkes between various Google and external 
 
 ![image](https://cloud.githubusercontent.com/assets/9888083/25569596/2fcb070e-2dcf-11e7-80d8-873d2de373aa.png)
 
-* **Doubleclick Campaign (Bid) Manager**: Requires admin permissions for the Google users. [Follow the documentation here](https://support.google.com/analytics/answer/6318719?hl=en).
 
+* **Doubleclick Campaign (Bid) Manager**: Linking to GA360 - Follow the [documentation here](https://support.google.com/analytics/answer/6318719?hl=en). Note: Requires admin permissions for both GA360 and DCM. Linking to YouTube - You can also enable tracking Ads and impression pixels to track impressions downstream (into YouTube for example) by following the documentation [here](https://support.google.com/dcm/answer/3040965) and [here](https://support.google.com/dcm/answer/2826133?hl=en&ref_topic=2826011).
 
-* **DoubleClick for Publishers**: This integration includes both [AdSense](https://www.google.com/adsense/start/#/?modal_active=none) and [Ad Exchange](https://www.doubleclickbygoogle.com/solutions/digital-marketing/ad-exchange/), and requires work on the side of the Google Admin, as well as the creation of a tagging system using either self-built or Google service-provided tag managers. After tagging is enabled, the following steps can be found in [Google's Documentation](https://support.google.com/analytics/answer/6371469?hl=en). Once you've done this, be sure to include the AdWord data by adding the ``extends: [hits_publisher_base]`` beneath ``view: hits_publisher`` (on line 90 in ``ga_customize`` out-of-the-box)
+* **DoubleClick for Publishers**: Linking to GA360 - This integration includes both AdSense and Ad Exchange, and requires work on the side of the Google Admin, as well as the creation of a tagging system using either self-built or Google service-provided tag managers. After tagging is enabled, the following steps can be found in [Google’s Documentation](https://support.google.com/analytics/answer/6371469?hl=en). Once you’ve done this, be sure to include the AdWords data by adding the extends: [hits_publisher_base] beneath view: hits_publisher (on line 90 in ga_customize out-of-the-box)
 
-* **Adwords**: Connecting AdWords is fairly straightforward. Follow the instructions provided in [Google's documentation](https://support.google.com/adwords/answer/6209127?hl=en). Once you've done this, be sure to include the AdWord data by adding the ``extends: [adwordsClickInfo_base]`` beneath ``view: adwordsClickInfo`` (on line 86 in ``ga_customize`` out-of-the-box)
+* **Adwords**: Linking to GA360 - Connecting AdWords is fairly straightforward. Follow the instructions provided in [Google’s documentation](https://support.google.com/adwords/answer/6209127?hl=en). Linking to YouTube: You can also link your AdWords account to YouTube as described [here](https://support.google.com/youtube/answer/3063482?hl=en&ref_topic=2973023).
 
-* **YouTube**: Youtube integration can be configured via the GUI in the GA360 console, though only data around the Youtube content can be linked, not user-level or client-speficic data.
+* **YouTube**: Linking to GA360 - Youtube content integration can cannot be tied natively with data exports. To workaround this, users can add YouTube pages to their Google Analytics console (via the GA GUI), then narrow down analysis to specific youtube channels via filters in Looker. Linking to AdWords: You can also link your AdWords account to YouTube as described [here](https://support.google.com/youtube/answer/3063482?hl=en&ref_topic=2973023).
 
-* **CRMs or Other Sources** Google does not capture any PII, which means that ``user_id`` and/or ``client_id`` is unique to only Google Analytics Premium. This key is not shared, by default, across any of your CRM data, or any other data sources you're pulling from. To join this data, a common key must be created. There are several methods to accomplishing this, one of which Google has provided some [documentation](https://github.com/GoogleCloudPlatform/google-analytics-premium-bigquery-statistics) around.
+* **CRMs (such as Salesforce) or Other Sources** Google does not capture any PII, which means that ``user_id`` and/or ``client_id`` is unique to only Google Analytics Premium. This key is not shared, by default, across any of your CRM data, or any other data sources you're pulling from. To join this data, a common key must be created. There are several methods to accomplishing this, one of which Google has provided some [documentation](https://github.com/GoogleCloudPlatform/google-analytics-premium-bigquery-statistics) around. You can find a blog post, which provides an example joining firebase data to GA360 data, on [Google's Cloud Blog](https://cloud.google.com/blog/big-data/2017/04/how-to-do-cross-platform-analytics-with-google-bigquery).
