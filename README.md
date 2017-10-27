@@ -1,9 +1,9 @@
 ### What does this Block do for me?
+**(1) Replication + More** - Replication of existing GA reports and dashboards, plus additional value-add analysis, accelerates time to value with a full plug-and-play model
 
-* Replication of existing GA reports and dashboards, plus additional value-add analysis
-* Accelerate time to value with a full plug-and-play model
-* Leverage analytics expertise of Looker + Google Analytics product teams
-* Take advantage of Looker's data platform functionality, including [data actions](https://discourse.looker.com/t/data-actions/3573), scheduling, permissions, alerting, and more
+**(2) Expertise** - Leverage analytics expertise of Looker + Google Analytics product teams
+
+**(3) Central Data Platform** - Take advantage of Looker's data platform functionality, including [data actions](https://discourse.looker.com/t/data-actions/3573), scheduling, permissions, alerting, and more
 
 
 ### Google Analytics Premium Data Structure
@@ -13,6 +13,8 @@
 * There are two types of nested fields: repeated fields and non-repeated fields. In Standard SQL, both are stored as ``ARRAY``'s, which can contain both [simple and complex data types](https://cloud.google.com/bigquery/docs/reference/standard-sql/arrays). Non-repeated fields can be unnested, and joined using a ``one_to_one`` relationship. Repeated fields are unnested, and joined on through a ``one_to_many`` join (see lines 30-34 of the ``ga_block`` view for an example). Please take note that brackets are used for non-repeated fields, and not used for repeated fields, in the join syntax. This is a critical element to working with nested fields in BigQuery.
 
 * Google's documentation on the data included in the export can be [found here](https://support.google.com/analytics/answer/3437719?hl=en).
+
+* You can also find a cookbook of SQL queries for common questions in [Google's documentation](https://support.google.com/analytics/answer/4419694?hl=en&ref_topic=3416089#query6_SequenceOfHits)
 
 
 ### Block Structure
@@ -29,9 +31,14 @@
 
 * **Available Explores**: Recall from above, that each ``extends`` field but must declared to allow users to Explore on a view.
 
-### Bringing in Custom User Segments
+### Bringing in Custom User Segments and Goals
 
-* Google Analytics provides great, out-of-the-box capabilities to create user segments based on up to 5 dimensions (e.g. demographic info, referral path, etc.). While these custom user segments are not exported to the GAP data set natively, it's easier, and more flexible, to recreate these segments in Looker. Simply create a dimension using a `Case When` statement, including all of the dimensions you'd like to filter on. Alternatively, you can create a filtered measure instead. Plus, you can include as many filters as you'd like to really hone in on specific user cohorts. Your assigned looker analyst or support chat can help you build in this logic if you get confused.
+* **Customer User Segments**: Google Analytics provides great, out-of-the-box capabilities to create user segments based on up to 5 dimensions (e.g. demographic info, referral path, etc.). While these custom user segments are not exported to the GAP data set natively, it's easier, and more flexible, to recreate these segments in Looker. Simply create a dimension using a `Case When` statement, including all of the dimensions you'd like to filter on. Alternatively, you can create a filtered measure instead. Plus, you can include as many filters as you'd like to really hone in on specific user cohorts. Your assigned looker analyst or support chat can help you build in this logic if you get confused.
+
+* **Goals**: Goal configured in Google Analytics Console are not natively exported into the BigQuery datasets. Similar to custom segments, we can recreate this logic in LookML, which allows for even greater flexibility, sophisticated analysis, and seamless shareability across all users. Examples of more sophisticated goals include:
+  * **Partial form completion** – User fills out fills out the first page of a form but does not complete it
+  * **Condition on earlier steps** – User completes a conversion immediately after interacting with a promotion
+  * **Condition on custom dimension** – Goal was completed by a certain type of user
 
 
 ### Connecting to Other Data Sources
