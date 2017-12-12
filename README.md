@@ -3,7 +3,7 @@
 
 **(2) Expertise** - Leverage analytics expertise of Looker + Google Analytics product teams
 
-**(3) Central Data Platform** - Take advantage of Looker's data platform functionality, including [data actions](https://discourse.looker.com/t/data-actions/3573), scheduling, permissions, alerting, and more
+**(3) Central Data Platform** - Take advantage of Looker's data platform functionality, including [data actions](https://discourse.looker.com/t/data-actions/3573), scheduling, permissions, alerting, parameterization (each user can only see their own data), and more
 
 
 ### Google Analytics Premium Data Structure
@@ -26,6 +26,8 @@
 ### Necessary Customizations
 
 * **View**:``ga_customize`` line 19 parameter for ``sql_table_name`` must be customized to the users ``data_set.ga_session_*``.
+
+* **Multiple Properties (Websites)**: If you have more than one website (property), you can choose to view all websites at the same time, or dynamically select the website for each query. You can also parameterize queries so that certain users can only see data for the websites they have permission to view. The field for website is called ``ga_sessions.hits.hits_sourcePropertyInfo``, which can be found at the bottom of the ``ga_block`` file.
 
 * **Dashboards**: Replace ``model: ga_connectors360`` with your chosen name.
 

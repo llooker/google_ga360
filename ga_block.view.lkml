@@ -76,6 +76,19 @@ explore: ga_sessions_base {
     relationship: one_to_one
   }
 
+  # join: hits_sourcePropertyInfo {
+  #   view_label: "Session: Hits: Property"
+  #   sql: LEFT JOIN UNNEST([hits.sourcePropertyInfo]) as hits_sourcePropertyInfo ;;
+  #   relationship: one_to_one
+  #   required_joins: [hits]
+  # }
+
+  # join: hits_eCommerceAction {
+  #   view_label: "Session: Hits: eCommerce"
+  #   sql: LEFT JOIN UNNEST([hits.eCommerceAction]) as  hits_eCommerceAction;;
+  #   relationship: one_to_one
+  #   required_joins: [hits]
+  # }
 
   join: hits_customDimensions {
     view_label: "Session: Hits: Custom Dimensions"
@@ -665,3 +678,8 @@ view: hits_eventInfo_base {
   dimension: eventValue {label: "Event Category"}
 
 }
+
+# view: hits_sourcePropertyInfo {
+# #   extension: required
+#   dimension: sourcePropertyDisplayName {label: "Property Display Name"}
+# }
