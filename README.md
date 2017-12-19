@@ -25,7 +25,7 @@
 
 ### Necessary Customizations
 
-* **View**:``ga_customize`` line 19 parameter for ``sql_table_name`` must be customized to the users ``data_set.ga_session_*``.
+* **View**:``ga_customize`` line for ``sql_table_name`` must be customized to the users ``data_set.ga_session_*``.
 
 * **Multiple Properties (Websites)**: If you have more than one website (property), you can choose to view all websites at the same time, or dynamically select the website for each query. You can also parameterize queries so that certain users can only see data for the websites they have permission to view. The field for website is called ``ga_sessions.hits.hits_sourcePropertyInfo``, which can be found at the bottom of the ``ga_block`` file.
 
