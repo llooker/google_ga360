@@ -5,6 +5,8 @@
 
 **(3) Central Data Platform** - Take advantage of Looker's data platform functionality, including [data actions](https://discourse.looker.com/t/data-actions/3573), scheduling, permissions, alerting, parameterization (each user can only see their own data), and more
 
+**(4) Multiple Properties in One View** - see all properties in one dashboard and explore interface! And parameterize user permissions as necessary (so analyst for website A can't see data for website B) to give each user a live view into the data that matters to them.
+
 
 ### Google Analytics Premium Data Structure
 

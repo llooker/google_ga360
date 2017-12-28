@@ -304,7 +304,7 @@ view: totals_base {
     label: "Time On Site Tier"
     type: tier
     sql: ${TABLE}.timeonsite ;;
-    tiers: [0,15,30,60,90,120,180,240,300,600]
+    tiers: [0,15,30,60,120,180,240,300,600]
     style: integer
   }
   measure: timeonsite_average_per_session {
