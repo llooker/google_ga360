@@ -1,15 +1,15 @@
 ### What does this Block do for me?
-**(1) Replication + More** - Replication of existing GA reports and dashboards, plus additional value-add analysis, accelerates time to value with a full plug-and-play model
+**(1) Combine Multiple Data Sources** - Combine your GA data with data from AdWords, DoubleClick, Facebook Ads, Salesforce, and more to get a holistic view of all your customer data in one central view (see bottom of this page for instructions).
 
-**(2) Expertise** - Leverage analytics expertise of Looker + Google Analytics product teams using our pre-built suite of Dashboard and Explorable metrics
+**(2) Replication + More** - Replication of existing GA reports and dashboards, plus additional value-add analysis assembled by the experts on the Looker and Google Product teams, accelerates time to value with a full plug-and-play model
 
-**(3) Central Data Platform** - Take advantage of Looker's data platform functionality, including [data actions](https://discourse.looker.com/t/data-actions/3573), scheduling, permissions, alerting, parameterization (each user can only see their own data), and more
+**(3) Compare Multiple Dimensions and Metrics** - rather than being limited to viewing 1 dimension, and 2-4 metrics at a time, Looker allows you to compare any number of dimensions and metrics, including retroactive goals and custom user segments, on the same visualization or dashboard.
 
-**(4) Multiple Properties in One Dashboard** - see all properties in one dashboard and explore interface! And parameterize user permissions as necessary (so analyst for website A can't see data for website B) to give each user a live view into the data that matters to them
+**(4) Enterprise Data Platform** - Take advantage of Looker's data platform functionality, including [data actions](https://discourse.looker.com/t/data-actions/3573), scheduling, permissions, alerting, parameterization (each user can only see their own data), and more
 
-**(5) Compare Multiple Metrics** - rather than being limited to viewing 2-4 metrics at a time, Looker allows you to compare any number of metrics on the same visualization or dashboard.
+**(5) Multiple GA Properties in One Dashboard** - see all properties in one dashboard and explore interface! And parameterize user permissions as necessary (so analyst for website A can't see data for website B) to give each user a live view into the data that matters to them
 
-**(6) Usable / Shareable Dashboards** - create centralized dashboards for the entire team, and departmental or individual dashboards for each user, and rest easy knowing everyone is looking at the same information at all times. Then schedule the dashboard for emails or alerts, period-end reporting, anamoly detection, or whatever else serves your use-case
+**(6) Usable / Shareable Dashboards** - create centralized dashboards for the entire team, and departmental or individual dashboards for each user, and rest easy knowing everyone is looking at the same information at all times. Then schedule the dashboard for emails or alerts, period-end reporting, anamoly detection, or whatever else serves your use-case.
 
 
 ### Google Analytics Premium Data Structure
