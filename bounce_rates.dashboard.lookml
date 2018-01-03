@@ -10,7 +10,7 @@
     fields:
     - ga_sessions.average_sessions_ver_visitor
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
     limit: 500
     column_limit: 50
     query_timezone: America/New_York
@@ -61,7 +61,7 @@
     fields:
     - ga_sessions.session_count
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
     limit: 500
     column_limit: 50
     query_timezone: America/New_York
@@ -112,7 +112,7 @@
     fields:
     - ga_sessions.unique_visitors
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
     limit: 500
     column_limit: 50
     query_timezone: America/New_York
@@ -165,7 +165,7 @@
     - totals.bounce_rate
     - ga_sessions.session_count
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
       ga_sessions.visitnumbertier: "-Below 1"
     sorts:
     - ga_sessions.visitnumbertier
@@ -252,7 +252,7 @@
     fields:
     - totals.bounces_total
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
     limit: 500
     column_limit: 50
     query_timezone: America/New_York
@@ -305,7 +305,7 @@
     - totals.bounce_rate
     - ga_sessions.session_count
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
     sorts:
     - ga_sessions.session_count desc
     limit: 5
@@ -393,7 +393,7 @@
     fields:
     - totals.bounce_rate
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
     limit: 500
     column_limit: 50
     query_timezone: America/New_York
@@ -447,7 +447,7 @@
     fill_fields:
     - ga_sessions.first_time_visitor
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
       ga_sessions.visitnumbertier: "-Below 1"
     sorts:
     - totals.bounce_rate desc
@@ -505,7 +505,7 @@
     fill_fields:
     - ga_sessions.first_time_visitor
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
     sorts:
     - ga_sessions.first_time_visitor
     limit: 500
@@ -564,7 +564,7 @@
     - ga_sessions.session_count
     - trafficSource.keyword
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
     sorts:
     - ga_sessions.session_count desc
     limit: 5
@@ -654,7 +654,7 @@
     - ga_sessions.session_count
     - trafficSource.source
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
     sorts:
     - ga_sessions.session_count desc
     limit: 5
@@ -744,7 +744,7 @@
     - totals.bounce_rate
     - ga_sessions.session_count
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
     sorts:
     - ga_sessions.session_count desc
     limit: 10
@@ -840,7 +840,7 @@
     - totals.transactions_count
     - totals.transactionRevenue_total
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
       hits_page.pageTitle: "-NULL"
     sorts:
     - ga_sessions.session_count desc

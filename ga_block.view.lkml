@@ -155,11 +155,13 @@ view: ga_sessions_base {
     sql: TIMESTAMP_SECONDS(${TABLE}.visitStarttime) ;;
     hidden: yes
   }
+
+  ## referencing partition_date for demo purposes only. Switch this dimension to reference visistStartSeconds
   dimension_group: visitStart {
     timeframes: [date,day_of_week,fiscal_quarter,week,month,year,month_name,month_num,week_of_year]
     label: "Visit Start"
     type: time
-    sql: (TIMESTAMP(${visitStartSeconds})) ;;
+    sql: (TIMESTAMP(${partition_date})) ;;
   }
   ## use visit or hit start time instead
   dimension: date {

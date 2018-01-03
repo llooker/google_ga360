@@ -56,7 +56,7 @@
     fields:
     - ga_sessions.session_count
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
     limit: 500
     column_limit: 50
     query_timezone: America/New_York
@@ -374,7 +374,7 @@
     - totals.transactions_count
     - totals.transactionRevenue_total
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
     sorts:
     - ga_sessions.session_count desc
     limit: 5
@@ -496,7 +496,7 @@
     - totals.transactionRevenue_total
     - ga_sessions.session_count
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
       ga_sessions.visitnumbertier: "-Below 1"
     sorts:
     - ga_sessions.visitnumbertier
@@ -622,7 +622,7 @@
     - totals.transactions_count
     - totals.transactionRevenue_total
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
       totals.timeonsite_tier: "-Undefined"
     sorts:
     - totals.timeonsite_tier
@@ -863,7 +863,7 @@
     - totals.transactions_count
     - totals.transactionRevenue_total
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
     sorts:
     - totals.transactionRevenue_total desc
     limit: 10

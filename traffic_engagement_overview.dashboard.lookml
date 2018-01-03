@@ -913,7 +913,7 @@
     - totals.transactionRevenue_total
     - first_page.pageTitle
     filters:
-      ga_sessions.partition_date: '2013-09-10 00:00:00 +0000'
+      ga_sessions.partition_date: '7 days ago for 7 days'
     sorts:
     - ga_sessions.session_count desc
     limit: 15

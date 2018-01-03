@@ -29,7 +29,7 @@
 
 * ``ga_customze``: contains all the extended view files. If your organization uses any custom fields with Google Analytics, this is where you can insert those fields. In-line directions are provided in the code. *_It's important to note that, if you want to Explore a table, there must be an extends parameter under the correspdoning table in this view file_*. For example, if I wanted to explore ``trafficsource``, I would add an ``extends: [trafficsource_base]`` parameter under ``view: trafficsource``.
 
-### Necessary Customizations
+### Customizations
 
 * **View**:``ga_customize`` line for ``sql_table_name`` must be customized to the users ``data_set.ga_session_*``.
 
@@ -38,6 +38,8 @@
 * **Dashboards**: Replace ``model: ga_connectors360`` with your chosen name.
 
 * **Available Explores**: Recall from above, that each ``extends`` field but must declared to allow users to Explore on a view.
+
+* **Visit Start Time**: Substitute `sql: (TIMESTAMP(${partition_date}))` with `sql: (TIMESTAMP(${visitStartSeconds}))`. We've referenced `partition_date` in this model for demo purposes due to a limited fake dataset.
 
 ### Bringing in Custom User Segments and Goals
 
