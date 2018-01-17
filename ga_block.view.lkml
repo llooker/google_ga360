@@ -182,7 +182,7 @@ view: ga_sessions_base {
 
   measure: average_sessions_ver_visitor {
     type: number
-    sql: ${session_count}/${unique_visitors}  ;;
+    sql: 1.0 * (${session_count}/NULLIF(${unique_visitors},0))  ;;
     value_format_name: decimal_2
     drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits, totals.page_views, totals.timeonsite]
   }

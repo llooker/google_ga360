@@ -1100,20 +1100,12 @@
     title: Property (Website)
     type: string_filter
     default_value: ''
-    model:
-    explore:
-    field:
-    listens_to_filters: []
     allow_multiple_values: true
     required: false
   - name: Date
     title: Date
     type: date_filter
     default_value: '7 days ago for 7 days'
-    model:
-    explore:
-    field:
-    listens_to_filters: []
     allow_multiple_values: true
     required: false
   - name: Campaign
