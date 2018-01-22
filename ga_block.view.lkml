@@ -172,7 +172,7 @@ view: ga_sessions_base {
 
   measure: session_count {
     type: count
-    drill_fields: [fullVisitorId, visitnumber, session_count, totals.hits, totals.pageviews, totals.timeonsite, totals.bounces]
+    drill_fields: [fullVisitorId, visitnumber, session_count, totals.transactions_count, totals.transactionRevenue_total]
   }
   measure: unique_visitors {
     type: count_distinct
@@ -341,6 +341,7 @@ view: totals_base {
     type: sum
     sql: (${TABLE}.transactionRevenue/1000000) ;;
     value_format_name: usd_0
+    drill_fields: [transactions_count, transactionRevenue_total]
   }
   measure: newVisits_total {
     label: "New Visits Total"
