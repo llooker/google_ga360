@@ -26,9 +26,9 @@ view: ga_sessions {
 
   # SCENARIO 2: Multiple properties. The property will dynamically look at the selected dataset using a filter.
   # sql_table_name: {% assign prop = ga_sessions.website_selector._sql %}
-  #                 {% if prop contains 'Website1' %} `titanium-kiln-120918.157271542.ga_sessions_*`
-  #                 {% elsif prop contains 'Website2' %} `titanium-kiln-120918.130709608.ga_sessions_*`
-  #                 {% elsif prop contains 'Website3' %} `titanium-kiln-120918.116188121.ga_sessions_*`
+  #                 {% if prop contains 'Website1' %} `project.dataset.ga_sessions_*`
+  #                 {% elsif prop contains 'Website2' %} `project.dataset.ga_sessions_*`
+  #                 {% elsif prop contains 'Website3' %} `project.dataset.ga_sessions_*`
   #                 {% endif %}
   #                 ;;
   #   filter: website_picker {
