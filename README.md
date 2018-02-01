@@ -31,15 +31,13 @@
 
 ### Customizations
 
+* **Connection**: in the `google_analytics_block` model file, change the connection name at the top to the name of your BQ connection.
+
 * **View**: the line for ``sql_table_name`` in the  ``ga_customize`` view must be changed to match the users schema and table name, in the format of ``<data_set>.ga_session_*``.
 
-* **Multiple Properties (Websites)**: If you have more than one website (property), you can choose to view all websites at the same time, or dynamically select the website for each query. You can also parameterize queries so that certain users can only see data for the websites they have permission to view. The field for website is called ``ga_sessions.hits.hits_sourcePropertyInfo``, which can be found at the bottom of the ``ga_block`` file.
+* **(Optional) Multiple Properties / Websites**: If you have more than one website (property), you can choose to view all websites at the same time, or dynamically select the website for each query. You can also parameterize queries so that certain users can only see data for the websites they have permission to view. The field for website is called ``ga_sessions.hits.hits_sourcePropertyInfo``, which can be found at the bottom of the ``ga_block`` file.
 
-* **Dashboards**: Replace ``model: ga_connectors360`` with your chosen name.
-
-* **Available Explores**: Recall from above, that each ``extends`` field but must declared to allow users to Explore on a view.
-
-* **Visit Start Time**: Substitute `sql: (TIMESTAMP(${partition_date}))` with `sql: (TIMESTAMP(${visitStartSeconds}))`. We've referenced `partition_date` in this model for demo purposes due to a limited fake dataset.
+* **(Optional) Visit Start Time**: Substitute `sql: (TIMESTAMP(${partition_date}))` with `sql: (TIMESTAMP(${visitStartSeconds}))`. We've referenced `partition_date` in this model for demo purposes due to a limited fake dataset.
 
 ### Bringing in Custom User Segments and Goals
 

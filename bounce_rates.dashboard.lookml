@@ -4,7 +4,7 @@
   elements:
   - name: Total Sessions
     title: Total Sessions
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -54,7 +54,7 @@
     height: 3
   - name: Unique Visitors
     title: Unique Visitors
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -104,7 +104,7 @@
     height: 3
   - name: Average Sessions per Visitor
     title: Average Sessions per Visitor
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -154,7 +154,7 @@
     height: 3
   - name: Total Bounces
     title: Total Bounces
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -204,7 +204,7 @@
     height: 3
   - name: Average Bounce Rate
     title: Average Bounce Rate
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -254,7 +254,7 @@
     height: 3
   - name: New vs Returning Bounce Totals
     title: New vs Returning Bounce Totals
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_pie
     fields:
@@ -313,7 +313,7 @@
     height: 8
   - name: Bounces by Visitor Frequency
     title: Bounces by Visitor Frequency
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_line
     fields:
@@ -402,7 +402,7 @@
     height: 8
   - title: Bounces by Keyword Acquisition
     name: Bounces by Keyword Acquisition
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_line
     fields:
@@ -491,7 +491,7 @@
     height: 7
   - name: New vs Returning User Bounce Rates
     title: New vs Returning User Bounce Rates
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_column
     fields:
@@ -549,7 +549,7 @@
     height: 8
   - name: Bounces by Browser
     title: Bounces by Browser
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_line
     fields:
@@ -638,7 +638,7 @@
     height: 8
   - name: Bounces and Rate by Page Path
     title: Bounces and Rate by Page Path
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_bar
     fields:
@@ -726,7 +726,7 @@
     height: 14
   - title: Bounces by Source Acquisition
     name: Bounces by Source Acquisition
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_line
     fields:
@@ -815,7 +815,7 @@
     height: 7
   - name: Top Performing Articles (Full Detail)
     title: Top Performing Articles (Full Detail)
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: table
     fields:
@@ -885,7 +885,7 @@
     title: Campaign
     type: field_filter
     default_value: ''
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     field: trafficSource.campaign
     listens_to_filters: []
@@ -895,7 +895,7 @@
     title: First Time Visitor
     type: field_filter
     default_value: ''
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     field: ga_sessions.first_time_visitor
     listens_to_filters: []

@@ -13,7 +13,7 @@
     height: 2
   - name: Total Sessions (Traffic)
     title: Total Sessions (Traffic)
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -63,7 +63,7 @@
     height: 2
   - name: Unique Visitors (Traffic)
     title: Unique Visitors (Traffic)
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -113,7 +113,7 @@
     height: 2
   - name: Returning Visitors
     title: Returning Visitors
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -163,7 +163,7 @@
     height: 2
   - name: First Time Visitors
     title: First Time Visitors
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -213,7 +213,7 @@
     height: 2
   - name: Average Sessions per Visitor (Traffic)
     title: Average Sessions per Visitor (Traffic)
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -263,7 +263,7 @@
     height: 2
   - name: Average Page Views per Session
     title: Average Page Views per Session
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -313,7 +313,7 @@
     height: 2
   - name: Average Session Length
     title: Average Session Length
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -363,7 +363,7 @@
     height: 2
   - title: User Conversion Funnel by Source
     name: User Conversion Funnel by Source
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_column
     fields:
@@ -417,7 +417,7 @@
     height: 8
   - title: User Conversion Funnel by Keyword
     name: User Conversion Funnel by Keyword
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_column
     fields:
@@ -471,7 +471,7 @@
     height: 8
   - name: Engagement by Keyword Search
     title: Engagement by Keyword Search
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_bar
     fields:
@@ -620,7 +620,7 @@
     height: 12
   - name: Keyword Full Detail
     title: Keyword Full Detail
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: table
     fields:
@@ -684,7 +684,7 @@
     height: 12
   - name: Traffic Source Full Detail
     title: Traffic Source Full Detail
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: table
     fields:
@@ -746,7 +746,7 @@
     height: 12
   - title: Top Performing First Pages Visited
     name: Top Performing First Pages Visited
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_line
     fields:
@@ -879,7 +879,7 @@
     height: 8
   - title: Top 15 Pages - First Page Visited
     name: Top 15 Pages - First Page Visited
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: table
     fields:
@@ -944,7 +944,7 @@
     height: 8
   - name: Engagement by Traffic Source
     title: Engagement by Traffic Source
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_bar
     fields:
@@ -1110,7 +1110,7 @@
     title: Campaign
     type: field_filter
     default_value: ''
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     field: trafficSource.campaign
     listens_to_filters: []
@@ -1120,7 +1120,7 @@
     title: First Time Visitor
     type: field_filter
     default_value: ''
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     field: ga_sessions.first_time_visitor
     listens_to_filters: []

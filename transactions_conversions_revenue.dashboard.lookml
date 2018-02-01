@@ -4,7 +4,7 @@
   elements:
   - name: Top Acquisition Sources by Revenue
     title: Top Acquisition Sources by Revenue
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_line
     fields:
@@ -125,7 +125,7 @@
     height: 9
   - name: First Page Visited (Full Detail)
     title: First Page Visited (Full Detail)
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: table
     fields:
@@ -203,7 +203,7 @@
     height: 6
   - name: Revenue and Conversion Rate by Session Length
     title: Revenue and Conversion Rate by Session Length
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_line
     fields:
@@ -323,7 +323,7 @@
     height: 9
   - name: Total Sessions
     title: Total Sessions
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -373,7 +373,7 @@
     height: 3
   - name: Top Keywords by Revenue
     title: Top Keywords by Revenue
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_line
     fields:
@@ -502,7 +502,7 @@
     height: 9
   - title: Revenue Conversion Rate by Visit Tier
     name: Revenue Conversion Rate by Visit Tier
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_line
     fields:
@@ -628,7 +628,7 @@
     height: 9
   - title: Total Revenue
     name: Total Revenue
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -652,7 +652,7 @@
     height: 3
   - title: Total Transactions
     name: Total Transactions
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -676,7 +676,7 @@
     height: 3
   - title: Average Revenue per Transaction
     name: Average Revenue per Transaction
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -712,7 +712,7 @@
     height: 3
   - title: Transaction Conversion Rate
     name: Transaction Conversion Rate
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -748,7 +748,7 @@
     height: 3
   - title: Unique Visitors
     name: Unique Visitors
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: single_value
     fields:
@@ -804,7 +804,7 @@
     height: 2
   - title: Revenue and Conversion Rate by First Page Visited
     name: Revenue and Conversion Rate by First Page Visited
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     type: looker_line
     fields:
@@ -923,7 +923,7 @@
     title: Campaign
     type: field_filter
     default_value: ''
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     field: trafficSource.campaign
     listens_to_filters: []
@@ -939,7 +939,7 @@
     title: First Time Visitor
     type: field_filter
     default_value: ''
-    model: bq_connectors_ga360
+    model: google_analytics_block
     explore: ga_sessions
     field: ga_sessions.first_time_visitor
     listens_to_filters: []
