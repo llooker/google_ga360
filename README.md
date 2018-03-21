@@ -51,7 +51,7 @@
 
 ### Connecting to Other Data Sources
 
-The image below depicts the possible linkes between various Google and external data sources. Documentation on how to link each of these sources can also be found below. If you want to get started with Transfer Service, the latest Transfer Service request for can be found [here](https://docs.google.com/forms/d/e/1FAIpQLSeNaY1aO-vn9WEmd5BW8hGPjIXQrjqse7vikUlh6KMf2OAQ4w/viewform)
+The image below depicts the possible linkes between various Google and external data sources. Documentation on how to link each of these sources can also be found below. If you want to get started with Transfer Service, the latest Transfer Service request for can be found [here](https://docs.google.com/forms/d/e/1FAIpQLSeNaY1aO-vn9WEmd5BW8hGPjIXQrjqse7vikUlh6KMf2OAQ4w/viewform).
 
 ![image](https://cloud.githubusercontent.com/assets/9888083/25569596/2fcb070e-2dcf-11e7-80d8-873d2de373aa.png)
 
