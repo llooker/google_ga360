@@ -14,7 +14,7 @@
 
 ### Google Analytics Premium Data Structure
 
-* Google Analytics Premium (GA360) data is exported (in this case, through [Transfer Services](https://cloud.google.com/bigquery/transfer/)) in the format of a single flat table with a new entry for each session. Rather than creating new tables for each entity attribute, Google places aggregate or attribute information in nested fields in the single tabel. For more information on Nested Fields, and why Google chooses to use them, please refer to this overview on [Why Nesting is so Cool](https://discourse.looker.com/t/why-nesting-is-so-cool/4182).
+* Google Analytics Premium (GA360) data is exported (in this case, through [Transfer Services](https://cloud.google.com/bigquery/transfer/),) in the format of a single flat table with a new entry for each session. Rather than creating new tables for each entity attribute, Google places aggregate or attribute information in nested fields in the single tabel. For more information on Nested Fields, and why Google chooses to use them, please refer to this overview on [Why Nesting is so Cool](https://discourse.looker.com/t/why-nesting-is-so-cool/4182). 
 
 * There are two types of nested fields: repeated fields and non-repeated fields. In Standard SQL, both are stored as ``ARRAY``'s, which can contain both [simple and complex data types](https://cloud.google.com/bigquery/docs/reference/standard-sql/arrays). Non-repeated fields can be unnested, and joined using a ``one_to_one`` relationship. Repeated fields are unnested, and joined on through a ``one_to_many`` join (see lines 30-34 of the ``ga_block`` view for an example). Please take note that brackets are used for non-repeated fields, and not used for repeated fields, in the join syntax. This is a critical element to working with nested fields in BigQuery.
 
@@ -51,7 +51,7 @@
 
 ### Connecting to Other Data Sources
 
-The image below depicts the possible linkes between various Google and external data sources. Documentation on how to link each of these sources can also be found below.
+The image below depicts the possible linkes between various Google and external data sources. Documentation on how to link each of these sources can also be found below. If you want to get started with Transfer Service, the latest Transfer Service request for can be found [here](https://docs.google.com/forms/d/e/1FAIpQLSeNaY1aO-vn9WEmd5BW8hGPjIXQrjqse7vikUlh6KMf2OAQ4w/viewform)
 
 ![image](https://cloud.githubusercontent.com/assets/9888083/25569596/2fcb070e-2dcf-11e7-80d8-873d2de373aa.png)
 
