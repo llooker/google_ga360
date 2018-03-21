@@ -647,14 +647,14 @@ view: contentInfo_base {
 
 view: hits_customDimensions_base {
   extension: required
-  dimension: index {}
+  dimension: index {type:number}
   dimension: value {}
 }
 
 view: hits_customMetrics_base {
   extension: required
 
-  dimension: index {}
+  dimension: index {type:number}
   dimension: value {}
 }
 
@@ -662,7 +662,7 @@ view: hits_customVariables_base {
   extension: required
   dimension: customVarName {}
   dimension: customVarValue {}
-  dimension: index {}
+  dimension: index {type:number}
 }
 
 view: hits_eCommerceAction_base {
