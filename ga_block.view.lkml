@@ -13,11 +13,11 @@ explore: ga_sessions_base {
     sql: LEFT JOIN UNNEST([${ga_sessions.trafficSource}]) as trafficSource ;;
     relationship: one_to_one
   }
-  # join: adwordsClickInfo {
-  #   view_label: "Session: Traffic Source : Adwords"
-  #   sql: LEFT JOIN UNNEST([${trafficSource.adwordsClickInfo}]) as  adwordsClickInfo;;
-  #   relationship: one_to_one
-  # }
+  join: adwordsClickInfo {
+    view_label: "Session: Traffic Source : Adwords"
+    sql: LEFT JOIN UNNEST([ga_sessions.trafficSource.adwordsClickInfo]) as  adwordsClickInfo;;
+    relationship: one_to_one
+  }
 
   # join: DoubleClickClickInfo {
   #   view_label: "Session: Traffic Source : DoubleClick"
@@ -478,7 +478,7 @@ view: hits_base {
   dimension: item {hidden:yes}
   dimension: contentinfo {hidden:yes}
   dimension: social {hidden: yes}
-  dimension: publisher {hidden: yes}
+  dimension: publisher {}
   dimension: appInfo {hidden: yes}
   dimension: contentInfo {hidden: yes}
   dimension: customDimensions {hidden: yes}
@@ -576,6 +576,27 @@ view: hits_publisher_base {
   extension: required    ## THESE FIELDS WILL ONLY BE AVAILABLE IF VIEW "hits_publisher" IN GA CUSTOMIZE HAS THE "extends" parameter declared
 
   dimension: dfpClicks {}
+
+  measure: total_dfp_clicks {
+    type: sum
+    sql: ${dfpClicks} ;;
+  }
+
+  measure: total_dfp_impressions {
+    type: sum
+    sql: ${dfpImpressions} ;;
+  }
+
+  measure: total_ads_revenue {
+    type: sum
+    sql: ${adsRevenue} ;;
+  }
+
+  measure: total_ads_clicks {
+    type: sum
+    sql: ${adsClicked} ;;
+  }
+
   dimension: dfpImpressions {}
   dimension: dfpMatchedQueries {}
   dimension: dfpMeasurableImpressions {}
