@@ -103,7 +103,7 @@ view: hits_transaction {
 }
 
 view: hits_item {
-  #extends: [hits_item_base]
+  extends: [hits_item_base]
 }
 
 # -- Advertising Fields

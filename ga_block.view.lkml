@@ -201,6 +201,16 @@ view: ga_sessions_base {
     }
   }
 
+  measure: second_time_visitors {
+    label: "Second Time Visitors"
+    type: count
+    filters: {
+      field: visitnumber
+      value: "2"
+    }
+  }
+
+
   measure: returning_visitors {
     label: "Returning Visitors"
     type: count
@@ -538,17 +548,29 @@ view: hits_item_base {
     sql: ${hits.id} ;;
   }
   dimension: transactionId {label: "Transaction ID"}
-  dimension: productName {label: "Product Name"}
+  dimension: productName {
+    label: "Product Name"
+    }
+
   dimension: productCategory {label: "Product Catetory"}
   dimension: productSku {label: "Product Sku"}
-  dimension: itemQuantity {label: "Item Quantity"}
-  dimension: itemRevenue {label: "Item Revenue"}
+
+  dimension: itemQuantity {
+    description: "Should only be used as a dimension"
+    label: "Item Quantity"
+    hidden: yes
+    }
+  dimension: itemRevenue {
+    description: "Should only be used as a dimension"
+    label: "Item Revenue"
+    hidden: yes
+    }
   dimension: curencyCode {label: "Curency Code"}
-  dimension: localItemRevenue {label:"Local Item Revenue"}
-  measure: total_item_revenue {
-    type: sum
-    sql: ${itemRevenue} ;;
-  }
+  dimension: localItemRevenue {
+    label:"Local Item Revenue"
+    description: "Should only be used as a dimension"
+    }
+
   measure: product_count {
     type: count_distinct
     sql: ${productSku} ;;
