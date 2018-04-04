@@ -7,7 +7,7 @@
 
 **(4) Enterprise Data Platform** - Take advantage of Looker's data platform functionality, including [data actions](https://discourse.looker.com/t/data-actions/3573), scheduling, permissions, alerting, parameterization (each user can only see their own data), and more
 
-**(5) Multiple GA Properties in One Dashboard** - see all properties in one dashboard and explore interface! And parameterize user permissions as necessary (so analyst for website A can't see data for website B) to give each user a live view into the data that matters to them
+**(5) Multiple GA Properties in One Dashboard** - Elevate your analysis beyond the limited "Roll-Up Reporting" and see all properties in one dashboard and explore interface! The parameterize user permissions as necessary (so analyst for website A can't see data for website B) to give each user a live view into the data that matters to them
 
 **(6) Usable / Shareable Dashboards** - create centralized dashboards for the entire team, and departmental or individual dashboards for each user, and rest easy knowing everyone is looking at the same information at all times. Then schedule the dashboard for emails or alerts, period-end reporting, anamoly detection, or whatever else serves your use-case.
 
