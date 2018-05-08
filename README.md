@@ -1,4 +1,4 @@
-### What does this Block do for me?
+### What does this Looker Block do for me?
 **(1) Combine Multiple Data Sources** - Combine your GA data with data from AdWords, DoubleClick, Facebook Ads, Salesforce, and more to get a holistic view of all your customer data in one central view (see bottom of this page for instructions).
 
 **(2) Replicate Existing GA Reports + More** - Replicate all your existing GA reports and dashboards in a matter of minutes or hours to make the switch to Looker seamless. Plus, enjoy all the additional value-add analysis that comes turnkey with this plug-and-play model and dashboards. Time-to-value for a new data tool has never been quicker.
