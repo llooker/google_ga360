@@ -7,7 +7,7 @@ explore: ga_sessions_block {
   always_filter: {
     filters: {
       field: ga_sessions.partition_date
-      value: "7 days ago for 7 days"
+      value: "2 years"
       ## Partition Date should always be set to a recent date to avoid runaway queries
    }
   }
@@ -102,8 +102,13 @@ view: hits_transaction {
   #extends: [hits_transaction_base]  # Comment out to remove fields
 }
 
+
+view: hits_eCommerceAction {
+  extends: [hits_eCommerceAction_base]
+}
+
 view: hits_item {
-  #extends: [hits_item_base]
+  extends: [hits_item_base]
 }
 
 # -- Advertising Fields
@@ -150,6 +155,9 @@ view: hits_eventInfo {
   }
 }
 
+view: hits_product {
+  extends: [hits_product_base]
+}
 
 view: hits_customDimensions {
   extends: [hits_customDimensions_base]
