@@ -276,12 +276,12 @@ view: geoNetwork_base {
     sql_latitude: ${latitude} ;;
     sql_longitude: ${longitude} ;;
   }
-  dimension: approximate_networkLocation {
-    type: location
-    sql_latitude: ROUND(${latitude},1) ;;
-    sql_longitude: ROUND(${longitude},1) ;;
-    drill_fields: [networkLocation]
-  }
+  # dimension: approximate_networkLocation {
+  #   type: location
+  #   sql_latitude: ROUND(${latitude},1) ;;
+  #   sql_longitude: ROUND(${longitude},1) ;;
+  #   drill_fields: [networkLocation]
+  # }
 }
 
 
@@ -430,7 +430,7 @@ view: totals_base {
 view: trafficSource_base {
   extension: required
 
-  # dimension: addContent {}
+  # dimension: adContent {}
   # dimension: adwords {}
   dimension: referralPath {label: "Referral Path"}
   dimension: campaign {}
