@@ -59,16 +59,16 @@ view: ga_sessions {
   # If you have custom dimensions on sessions, declare them here.
 
   # dimension: custom_dimension_2 {
-  #   sql: (SELECT value FROM UNNEST(${TABLE}.customdimensions) WHERE index=2) ;;
+  #   sql: (SELECT value FROM UNNEST(${TABLE.customdimensions}) WHERE index=2) ;;
   # }
 
 
   # dimension: custom_dimension_2 {
-  #   sql: (SELECT value FROM UNNEST(${TABLE}.customdimensions) WHERE index=2) ;;
+  #   sql: (SELECT value FROM UNNEST(${TABLE.customdimensions}) WHERE index=2) ;;
   # }
 
   # dimension: custom_dimension_3 {
-  #   sql: (SELECT value FROM UNNEST(${TABLE}.customdimensions) WHERE index=3) ;;
+  #   sql: (SELECT value FROM UNNEST(${TABLE.customdimensions}) WHERE index=3) ;;
   # }
 }
 
