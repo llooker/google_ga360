@@ -4,7 +4,7 @@ connection: "bigquery-connectors-ga360"
 include: "*.view"
 
 # include all the dashboards
-include: "*.dashboard"
+# include: "*.dashboard"
 
 explore: ga_sessions {
   extends: [ga_sessions_block]

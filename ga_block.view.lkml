@@ -124,7 +124,7 @@ view: ga_sessions_base {
 
   dimension: id {
     primary_key: yes
-    sql: CONCAT(CAST(${fullVisitorId} AS STRING), '|', COALESCE(CAST(${visitId} AS STRING),'')) ;;
+    sql: CONCAT(CAST(${fullVisitorId} AS STRING), '|', COALESCE(CAST(${visitId} AS STRING),''), CAST(FORMAT_TIMESTAMP('%F %T', TIMESTAMP(PARSE_DATE('%Y%m%d', REGEXP_EXTRACT(_TABLE_SUFFIX,r'^\d\d\d\d\d\d\d\d')))  )) AS STRING) ;;
   }
   dimension: visitorId {label: "Visitor ID"}
 
@@ -161,7 +161,7 @@ view: ga_sessions_base {
     timeframes: [date,day_of_week,fiscal_quarter,week,month,year,month_name,month_num,week_of_year]
     label: "Visit Start"
     type: time
-    sql: (TIMESTAMP(${partition_date})) ;;
+    sql: (TIMESTAMP(${visitStartSeconds})) ;;
   }
   ## use visit or hit start time instead
   dimension: date {
