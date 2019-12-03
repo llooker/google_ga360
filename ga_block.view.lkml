@@ -534,7 +534,7 @@ view: hits_transaction_base {
   }
   dimension: transactionShipping {label: "Transaction Shipping"}
   dimension: affiliation {}
-  dimension: curencyCode {label: "Curency Code"}
+  dimension: currencyCode {label: "Curency Code"}
   dimension: localTransactionRevenue {label: "Local Transaction Revenue"}
   dimension: localTransactionTax {label: "Local Transaction Tax"}
   dimension: localTransactionShipping {label: "Local Transaction Shipping"}
