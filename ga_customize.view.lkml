@@ -7,7 +7,7 @@ explore: ga_sessions_block {
   always_filter: {
     filters: {
       field: ga_sessions.partition_date
-      value: "2 years"
+      value: "2017-06-01 to 2017-07-01"
       ## Partition Date should always be set to a recent date to avoid runaway queries
    }
   }
