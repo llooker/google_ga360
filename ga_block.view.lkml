@@ -436,7 +436,9 @@ view: device_base {
   dimension: browserVersion {label:"Browser Version"}
   dimension: operatingSystem {label: "Operating System"}
   dimension: operatingSystemVersion {label: "Operating System Version"}
-  dimension: isMobile {label: "Is Mobile"}
+  dimension: deviceCategory { label:"Device Category" description:"mobile,tablet,desktop"}
+  dimension: isMobile {type: yesno label: "Is Mobile" sql: ${deviceCategory} in ('mobile','tablet') ;; }
+  dimension: isDesktop {type: yesno label: "Is Desktop" sql: ${deviceCategory} = 'desktop' ;; }
   dimension: flashVersion {label: "Flash Version"}
   dimension: javaEnabled {
     label: "Java Enabled"
