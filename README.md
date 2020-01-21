@@ -70,3 +70,9 @@ The image below depicts the possible links between various Google and external d
 ### What if I find an error? Suggestions for improvements?
 
 Great! Blocks were designed for continuous improvement through the help of the entire Looker community, and we'd love your input. To log an error or improvement recommendations, simply create a "New Issue" in the corresponding [Github repo for this Block](https://github.com/llooker/google_ga360/issues). Please be as detailed as possible in your explanation, and we'll address it as quick as we can.
+
+
+### Notes and Other Known Issues
+
+* **Data Discrepency in User Count Between GA UI and GA in BQ** - The user count between the GA UI and the data exported to BQ will always have an expected 1-2% discrepency. This is because, the Google Analytics UI estimates the total number of users using a specific user counting algorithm for all reports except unsampled reports, whereas a proper BigQuery user count query which counts distinct fullVisitorIds will literally count all unique fullVisitorIds. Hence there can be up to a 2% discrepancy between the Google Analytics UI and BigQuery export. However, if the discrepancy is more than that, then you should contact your GA360 support Agency.
+* **Data Discrepency in Session Count Between GA UI and GA in BQ** - In the GA UI, sessions are only counted if they contain an interaction hit. If the hit is set to non-interaction=true, then it wouldn’t initiate a session to be captured for GA. However, in BigQuery we get all the hit level data. Therefore, we can get all those hits where non-interaction=true. Now, in order to compare the total sessions between GA and BigQuery, we need to check all the sessions with interaction hits. That’s the reason, we’ve included this condition.

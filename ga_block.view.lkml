@@ -707,7 +707,7 @@ view: hits_eventInfo_base {
 
   dimension: eventAction {label: "Event Action"}
   dimension: eventLabel {label: "Event Label"}
-  dimension: eventValue {label: "Event Category"}
+  dimension: eventValue {label: "Event Value"}
 
 }
 
