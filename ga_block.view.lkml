@@ -172,6 +172,10 @@ view: ga_sessions_base {
 
   measure: session_count {
     type: count
+    filters: {
+      field: hits.isInteraction
+      value: "yes"
+    }
     drill_fields: [fullVisitorId, visitnumber, session_count, totals.transactions_count, totals.transactionRevenue_total]
   }
   measure: unique_visitors {
@@ -476,6 +480,7 @@ view: hits_base {
   dimension: isInteraction {
     label: "Is Interaction"
     type: yesno
+    description: "If this hit was an interaction, this is set to true. If this was a non-interaction hit (i.e., an event with interaction set to false), this is false."
   }
   dimension: referer {}
 
