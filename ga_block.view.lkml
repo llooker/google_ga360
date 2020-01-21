@@ -473,7 +473,7 @@ view: hits_base {
     label: "Is Secure"
     type: yesno
   }
-  dimension: isiInteraction {
+  dimension: isInteraction {
     label: "Is Interaction"
     type: yesno
   }
