@@ -151,7 +151,7 @@ view: ga_sessions_base {
 
   dimension: visitStartSeconds {
     label: "Visit Start Seconds"
-    type: date
+    type: date_time
     sql: TIMESTAMP_SECONDS(${TABLE}.visitStarttime) ;;
     hidden: yes
   }
