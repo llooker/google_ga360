@@ -131,8 +131,9 @@ explore: ga_sessions_base {
 
 view: ga_sessions_base {
   extension: required
-  dimension: partition_date {
-    type: date_time
+  dimension_group: partition {
+    type: time
+    timeframes: [raw,date]
     sql: TIMESTAMP(PARSE_DATE('%Y%m%d', REGEXP_EXTRACT(_TABLE_SUFFIX,r'^\d\d\d\d\d\d\d\d')))  ;;
   }
 
