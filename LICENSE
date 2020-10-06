@@ -1,5 +1,21 @@
-By downloading/using the source code files located in this GitHub repository (“Components”), you agree to the terms below.
+The MIT License (MIT)
 
-All Components listed herein are Copyright (c) 2019 Looker Data Sciences, Inc.  All rights reserved.
+Copyright (c) 2020 Looker
 
-Certain Components may disclose inventions that may be claimed within patents owned or patent applications filed by Looker Data Sciences, Inc. (Looker). Subject to the terms of the master subscription license agreement located at https://looker.com/terms (the MSA) and this notice, Customers and other users, are granted the limited license set forth in MSA. All terms, including but not limited to, Product Warranty, License and License Restrictions, Disclaimers, and Liability are governed by the MSA terms. Notwithstanding anything to the contrary, all Components are intended for use only with the Looker Product. All capitalized terms not fully defined herein, shall have the same meaning as ascribed to them in the MSA. 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
