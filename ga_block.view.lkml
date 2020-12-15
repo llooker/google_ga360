@@ -161,7 +161,7 @@ view: ga_sessions_base {
     timeframes: [date,day_of_week,fiscal_quarter,week,month,year,month_name,month_num,week_of_year]
     label: "Visit Start"
     type: time
-    sql: (TIMESTAMP(${visitStartSeconds})) ;;
+    sql: ${visitStartSeconds::datetime} ;;
   }
   ## use visit or hit start time instead
   dimension: date {
